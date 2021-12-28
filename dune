@@ -1,0 +1,12 @@
+(library
+ (name deter)
+ (modules deter))
+
+(executable
+ (modes byte exe)
+ (name server)
+ (modules server)
+ (libraries deter yojson lwt cohttp cohttp-lwt-unix))
+(env
+ (dev
+  (flags (:standard -w -27))))
