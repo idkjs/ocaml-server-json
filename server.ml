@@ -3,7 +3,7 @@ open Yojson
 open Printf
 open Deter
 open Lwt
-
+(* convert a list of lists into an integer list *)
 let rec listify (json):int list list =
   let rec intify (list):int list =
     match list with
